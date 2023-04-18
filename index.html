@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Site Web</title>
+    <!-- Inclure le CDN de Tailwind CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- En-tête -->
+    <header class="bg-gray-900 text-white">
+        <div class="container mx-auto py-4 px-8">
+            <h1 class="text-3xl text c font-bold">Mon Site Web</h1>
+        </div>
+    </header>
+    <!-- Contenu principal -->
+    <main>
+        <div class="container mx-auto py-8 px-4">
+            <!-- Section "À Propos" -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">À Propos</h2>
+                <p>Bienvenue sur mon site web. Ici, vous pouvez en apprendre plus sur moi et mes intérêts.</p>
+            </section>
+            <!-- Section "Mes Intérêts" -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Mes Intérêts</h2>
+                <ul class="list-disc list-inside">
+                    <li>La programmation</li>
+                    <li>Les jeux vidéo</li>
+                    <li>La musique</li>
+                </ul>
+            </section>
+
+            <!-- Section "Mes Projets" -->
+            <section>
+                <h2 class="text-2xl font-bold mb-4">Mes Projets</h2>
+                <ul class="list-disc list-inside">
+                    <li><a href="#" class="text-blue-500 hover:text-blue-700">Projet 1</a></li>
+                    <li><a href="#" class="text-blue-500 hover:text-blue-700">Projet 2</a></li>
+                    <li><a href="#" class="text-blue-500 hover:text-blue-700">Projet 3</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <!-- Pied de page -->
+    <footer class="bg-gray-900 text-white absolute bottom-0 w-full">
+        <div class="container mx-auto py-4 px-8">
+            <p class="text-sm">&copy; 2023 Mon Site Web. Tous droits réservés.</p>
+            <p class="text-sm text-right">&copy; 2023 Made with ♥️ by Gwada.</p>
+        </div>
+    </footer>
+    <!-- Inclure le CDN de GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script>
+        // Animation du titre de la page
+        gsap.from("h1", { opacity: 0, duration: 1, y: -50 });
+
+        // Animation des sections
+        gsap.from("section", { opacity: 0, duration: 1, y: -50, stagger: 0.25 });
+
+        // Animation de la liste des projets
+        gsap.from("li", { opacity: 0, duration: 1, x: -50, stagger: 0.25, delay: 1 });
+
+        // Animation du pied de page
+        gsap.from("footer", { opacity: 0, duration: 1, y: 50, delay: 1.5 });
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
